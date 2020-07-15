@@ -1,12 +1,9 @@
 const express = require('express');
-const { route } = require('./users');
 const router = express.Router();
 
-// route   GET api/posts/test
-// desc    tests the posts route
-// access  public
+// @route   GET api/posts/test
+// @desc    Tests post route
+// @access  Public
+router.get('/test', (req, res) => res.json({ msg: 'Posts Works' }));
 
-
-router.get('/test', (req, res) => res.json({ msg: "posts works" }))
-
-module.exports = router
+module.exports = router;
